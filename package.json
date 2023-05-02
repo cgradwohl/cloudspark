@@ -8,7 +8,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "frontend:dev": "npm run dev --workspace frontend",
+    "frontend:test": "npm run test --workspace frontend",
+    "hosting:test": "npm run test --workspace hosting-service",
+    "test": "npm run test --workspaces --if-present"
+
   },
   "author": "",
   "license": "ISC"

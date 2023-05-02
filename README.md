@@ -1,6 +1,16 @@
 # Cloudspark Monorepo
 
-## Workspace Commands
+## Workspace Application Commands
+
+**_See scripts in root `package.json`_**
+
+Start `frontend` dev server
+`npm run dev --workspace frontend`
+
+Build `hosting-service`
+`npm run build --workspace hosting-service`
+
+## Workspace Utility Commands
 
 Create workspace `workspace-a`
 `npm init -w workspace-a`
