@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/hosting-service.ts",
+  "app": "dist/hosting-service.js",
   "watch": {
     "include": [
       "**"
