@@ -20,6 +20,14 @@ Create workspace `a` in the `./packages` folder
 Install the `abbrev` package in workspace `a`
 `npm install abbrev -w a`
 
+Install scoped packages
+
+```bash
+npm init -y --scope @fantastic -w packages/core
+npm init -y --scope @fantastic -w packages/web
+npm init -y --scope @fantastic -w packages/cli
+```
+
 Run the `test` command in workspace `a`
 `npm run test --workspace=a`
 
