@@ -8,7 +8,6 @@ import * as acm from "aws-cdk-lib/aws-certificatemanager";
 import * as cloudfront from "aws-cdk-lib/aws-cloudfront";
 import * as cloudfront_origins from "aws-cdk-lib/aws-cloudfront-origins";
 import * as s3 from "aws-cdk-lib/aws-s3";
-import * as s3deploy from "aws-cdk-lib/aws-s3-deployment";
 import { Construct } from "constructs";
 
 export interface StaticSiteProps {
@@ -75,15 +74,11 @@ export class StaticSite extends Construct {
     new CfnOutput(this, "Bucket", { value: siteBucket.bucketName });
 
     // TLS certificate
-    const certificate = new acm.DnsValidatedCertificate(
-      this,
-      "SiteCertificate",
-      {
-        domainName: siteDomain,
-        hostedZone: zone,
-        region: "us-east-1", // Cloudfront only checks this region for certificates.
-      }
-    );
+    const certificate = new acm.Certificate(this, "SiteCertificate", {
+      domainName: siteDomain,
+      // hostedZone: zone,
+      // region: "us-east-1", // Cloudfront only checks this region for certificates.
+    });
     new CfnOutput(this, "Certificate", { value: certificate.certificateArn });
 
     // CloudFront distribution
