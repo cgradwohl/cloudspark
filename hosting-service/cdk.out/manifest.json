@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::686719342996:role/cdk-hnb659fds-deploy-role-686719342996-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::686719342996:role/cdk-hnb659fds-cfn-exec-role-686719342996-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-686719342996-us-east-1/c23e8e04acdf1b3bff17d2896424c28c9c6168827039de12b35a0db91509edf8.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-686719342996-us-east-1/162c570258a2438f5e6558df7f382e44402dd008aeab8acf1532fed2549fce10.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -69,28 +69,10 @@
             "data": "StaticSiteBucket34E5D9AF"
           }
         ],
-        "/HostingServiceStack/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole/Resource": [
+        "/HostingServiceStack/StaticSite/SiteCertificate/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "StaticSiteSiteCertificateCertificateRequestorFunctionServiceRole7FA09955"
-          }
-        ],
-        "/HostingServiceStack/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "StaticSiteSiteCertificateCertificateRequestorFunctionServiceRoleDefaultPolicyFC20309A"
-          }
-        ],
-        "/HostingServiceStack/StaticSite/SiteCertificate/CertificateRequestorFunction/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "StaticSiteSiteCertificateCertificateRequestorFunctionFCF50CB3"
-          }
-        ],
-        "/HostingServiceStack/StaticSite/SiteCertificate/CertificateRequestorResource/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "StaticSiteSiteCertificateCertificateRequestorResourceB92D481B"
+            "data": "StaticSiteSiteCertificate984AC63F"
           }
         ],
         "/HostingServiceStack/StaticSite/Certificate": [
@@ -117,18 +99,6 @@
             "data": "StaticSiteSiteAliasRecord5B525E22"
           }
         ],
-        "/HostingServiceStack/StaticSite/DeployWithInvalidation/AwsCliLayer/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "StaticSiteDeployWithInvalidationAwsCliLayerBCA2C2ED"
-          }
-        ],
-        "/HostingServiceStack/StaticSite/DeployWithInvalidation/CustomResource/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "StaticSiteDeployWithInvalidationCustomResource0B8F0E74"
-          }
-        ],
         "/HostingServiceStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
           {
             "type": "aws:cdk:logicalId",
@@ -145,24 +115,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "AWSCloudFrontPartitionHostedZoneIdMap"
-          }
-        ],
-        "/HostingServiceStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
-          }
-        ],
-        "/HostingServiceStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
-          }
-        ],
-        "/HostingServiceStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
           }
         ],
         "/HostingServiceStack/CDKMetadata/Default": [
