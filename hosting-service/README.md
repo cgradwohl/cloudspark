@@ -1,14 +1,6 @@
-# Welcome to your CDK TypeScript project
+# Static Site Hosting Service
 
-This is a blank project for CDK development with TypeScript.
+The domain for the static site (i.e. mystaticsite.com) must be configured as a hosted zone in Route53 prior to deploying this example. For instructions on configuring Route53 as the DNS service for your domain, see the Route53 documentation: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring.html
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+Deploy the stack
+`cdk deploy -c accountId=123456789 -c domain=mystaticsite.com -c subdomain=www`
