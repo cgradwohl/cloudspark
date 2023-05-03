@@ -10,10 +10,13 @@ import * as cloudfront_origins from "aws-cdk-lib/aws-cloudfront-origins";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import { Construct } from "constructs";
 
+const SUBDOMAIN = "www";
+const DOMAIN = "chrisgradwohl.com";
+
 export interface StaticSiteProps {
   domainName: string;
   siteSubDomain: string;
-  env: { account: "686719342996"; region: "us-east-1" };
+  env: any;
 }
 /**
  * Static site infrastructure, which deploys site content to an S3 bucket.
@@ -143,11 +146,6 @@ export class StaticSite extends Construct {
   }
 }
 
-const SUBDOMAIN = "www";
-const DOMAIN = "gwohl.com";
-const ACCOUNT_ID = "686719342996";
-const REGION = "us-east-1";
-
 export class HostingServiceStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
@@ -155,7 +153,7 @@ export class HostingServiceStack extends cdk.Stack {
     new StaticSite(this, "StaticSite", {
       domainName: DOMAIN,
       siteSubDomain: SUBDOMAIN,
-      env: { account: ACCOUNT_ID, region: REGION },
+      env: props?.env,
     });
   }
 }

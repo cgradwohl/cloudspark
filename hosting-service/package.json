@@ -8,7 +8,7 @@
   "scripts": {
     "build": "node build.js",
     "test": "jest",
-    "deploy": "npm run cdk -- deploy -c accountId=686719342996 -c domain=gwohl.com -c subdomain=www",
+    "deploy": "npm run cdk -- deploy",
     "synth": "npm run cdk -- synth",
     "cdk": "cdk"
   },
